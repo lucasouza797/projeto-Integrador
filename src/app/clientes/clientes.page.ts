@@ -10,18 +10,18 @@ import { ClienteService } from '../services/cliente.service';
 export class ClientesPage implements OnInit {
 
   lista : Cliente[] = [];
-  constructor(private ClienteServ : ClienteService) { }
+
+  constructor( private clienteServ : ClienteService ) { }
 
   ngOnInit() {
-    this.ClienteServ.listaDeClientes().subscribe(Response=>{
-console.log(Response);
-   this.lista = Response;
-   console.log(this.lista);
+this.clienteServ.listaDeClientes().subscribe(response=>{
+
+console.log(response);
+this.lista = response;
+console.log(this.lista)
 },err=>{
-      
-  })
-    
-  }
-  
+
+})
+}
 
 }

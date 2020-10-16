@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard'; 
 
-const redirectToLogin = () => redirectUnauthorizedTo(['login']); 
-
+const redirectToLogin = () => redirectUnauthorizedTo(['login']);
 const routes: Routes = [
   {
     path: '',
@@ -16,19 +15,21 @@ const routes: Routes = [
   },
   {
     path: 'clientes',
-    loadChildren: () => import('./clientes/clientes.module').then( m => m.ClientesPageModule),canActivate : [AngularFireAuthGuard],
-    data : {authGuardPipe : redirectToLogin} 
-   
+    loadChildren: () => import('./clientes/clientes.module').then( m => m.ClientesPageModule),
+    canActivate : [AngularFireAuthGuard],
+ data : {authGuardPipe : redirectToLogin} 
+
   },
   {
     path: 'clientes-novo',
-    loadChildren: () => import('./clientes-novo/clientes-novo.module').then( m => m.ClientesNovoPageModule),canActivate : [AngularFireAuthGuard],
-    data : {authGuardPipe : redirectToLogin} 
-   
+    loadChildren: () => import('./clientes-novo/clientes-novo.module').then( m => m.ClientesNovoPageModule),
+    canActivate : [AngularFireAuthGuard],
+ data : {authGuardPipe : redirectToLogin} 
+
   },
   {
-    path: 'Sair',
-    loadChildren: () => import('./Sair/Sair.module').then( m => m.SairPageModule)
+    path: 'sair',
+    loadChildren: () => import('./sair/sair.module').then( m => m.SairPageModule)
   }
 ];
 

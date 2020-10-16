@@ -28,6 +28,7 @@ import { ClienteService } from './services/cliente.service';
     AngularFirestoreModule,
     AngularFireStorageModule
     ], 
+   
   providers: [
     StatusBar,
     SplashScreen,
