@@ -1,15 +1,12 @@
 <ion-header>
 <ion-toolbar>
-<ion-buttons slot="start">
-<ion-menu-button></ion-menu-button>
-</ion-buttons>
-<ion-title>Cadastro de Cliente</ion-title>
+<ion-title>clientes-atualizar</ion-title>
 </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <form [formGroup]="formGroup">
+<form [formGroup]="formGroup">
 
 <ion-item>
 <ion-label position="floating">Nome</ion-label>
@@ -33,8 +30,8 @@
 </ion-item>
 
 <ion-item>
-      <ion-label position="floating">Cidade</ion-label>
-      <ion-input type="text" formControlName="cidade"></ion-input>
+<ion-label position="floating">Cidade</ion-label>
+<ion-input type="text" formControlName="cidade"></ion-input>
 </ion-item>
 
 <ion-item>
@@ -52,7 +49,7 @@
 <ion-input type="text" formControlName="telefone"></ion-input>
 </ion-item>
 
-<ion-button (click)="cadastrar()" expand="full">Cadastrar</ion-button>
+<ion-button (click)="atualizar()" expand="full">Atualizar</ion-button>
 </form>
 
 </ion-content>
